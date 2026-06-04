@@ -1,0 +1,623 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Barber</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link rel="manifest" href="site.webmanifest"> -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favimg.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	
+ <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/gijgo.css">
+   <link rel="stylesheet" href="assets/css/slicknav.css">
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+   <link rel="stylesheet" href="assets/css/themify-icons.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<style>
+	/* ==========================
+   KERALA FOOD PAGE STYLE
+========================== */
+
+body{
+    background:white;
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Left Palm Tree */
+body::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:700px;
+    width:180px;
+    height:350px;
+    background:url('assets/img/doodles/palm-left.png') no-repeat;
+    background-size:contain;
+    opacity:.15;
+    z-index:0;
+}
+
+/* Right Palm Tree */
+body::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:300px;
+    width:220px;
+    height:420px;
+    background:url('assets/img/doodles/palm-right.png') no-repeat;
+    background-size:contain;
+    opacity:.15;
+    z-index:0;
+}
+.section-heading{
+    position:relative;
+    z-index:2;
+}
+
+.sub-title{
+    display:block;
+    color:#b98a34;
+    font-style:italic;
+    font-size:18px;
+    margin-bottom:10px;
+    font-family:cursive;
+}
+
+.section-heading h2{
+    font-size:58px;
+    font-weight:700;
+    color:#1e3d2f;
+    margin-bottom:15px;
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+}
+
+.divider span{
+    width:70px;
+    height:2px;
+    background:#d4b06a;
+}
+
+.divider i{
+    color:#d4b06a;
+}
+.food-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+.food-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.food-card .p-4{
+    padding:22px;
+}
+
+.food-card h4{
+    color:#173b2e;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.food-card p{
+    color:#777;
+    line-height:1.8;
+}
+
+/* Price Badge */
+.food-card::before{
+    content:"Since 1970";
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#355f3a;
+    color:#fff;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:20px;
+}
+.heritage-banner{
+    background:
+    linear-gradient(rgba(21,61,35,.85),
+    rgba(21,61,35,.85)),
+    url('assets/img/food/banner-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    border-radius:20px;
+    padding:70px 40px;
+    text-align:center;
+    color:white;
+    margin:60px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+.heritage-banner span{
+    color:#d4b06a;
+    font-style:italic;
+}
+
+.heritage-banner h2{
+    color:#fff;
+    font-size:42px;
+    margin:15px 0;
+}
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.food-item img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.food-item:hover img{
+    transform:scale(1.08);
+}
+</style>
+
+<body>
+	
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/favimg.png">
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Preloader Start -->
+	
+   <header>
+        <!-- Header Start -->
+       <div class="header-area header-sticky">
+            <div class="main-header ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                               <a href="index.html"><img src="assets/img/logo/logo.png" alt="" width="200px"></a>
+                            </div>
+                        </div>
+                    <div class="col-xl-8 col-lg-8">
+                            <!-- main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">                                                                                                                                     
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="services.html">Service</a></li>
+                                        
+                                        <li><a href="#">Gallery</a>
+                                            <ul class="submenu">
+                                                <li><a href="rooms.html">Rooms</a>
+                                                <li><a href="dishes.html">Dishes</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>             
+                        <div class="col-xl-2 col-lg-2">
+                            <!-- header-btn -->
+                            <div class="header-btn">
+                                <a href="#" class="btn btn1 d-none d-lg-block ">Book Online</a>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+	
+    <!-- Hero Area -->
+<div class="slider-area">
+    <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
+        data-background="assets/img/hero/food_hero.png">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                    <div class="hero-caption">
+                        <span>Authentic Kerala Cuisine</span>
+                        <h2>Our Culinary Experiences</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--hero end-->
+
+	
+<!-- Food Experience Section -->
+<section class="room-area section-padding30">
+    <div class="container">
+
+       <div class="section-heading text-center mb-70">
+
+    <span class="sub-title">
+        Authentic Kerala Flavors
+    </span>
+
+    <h2>
+        Signature Dishes
+    </h2>
+
+    <div class="divider">
+        <span></span>
+        <i class="fas fa-leaf"></i>
+        <span></span>
+    </div>
+
+</div>
+
+        <div class="row">
+
+            <!-- Dish 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/food/karimeen.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Karimeen Pollichathu</h4>
+                        <p>
+                            Kerala's famous pearl spot fish marinated
+                            with traditional spices and wrapped in
+                            banana leaves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/gallery/gallery10.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Traditional Sadya</h4>
+                        <p>
+                            A grand feast served on banana leaves
+                            featuring authentic Kerala flavors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/food/biriyani.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Malabar Biriyani</h4>
+                        <p>
+                            Fragrant rice layered with spices and
+                            slow-cooked to perfection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/food/appam.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Appam & Stew</h4>
+                        <p>
+                            Soft lace-edged appams served with creamy
+                            vegetable or chicken stew.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/food/prawn.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Prawn Roast</h4>
+                        <p>
+                            Fresh backwater prawns cooked in roasted
+                            Kerala spices and coconut oil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dish 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card mb-40">
+                    <img src="assets/img/food/toddy-shop.png" class="img-fluid">
+                    <div class="p-4">
+                        <h4>Toddy Shop Specials</h4>
+                        <p>
+                            Rustic Kerala recipes inspired by local
+                            toddy shop traditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="dining-section">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- Left Image -->
+            <div class="col-lg-5">
+                <div class="dining-image">
+                    <img src="assets/img/food/dining.png" alt="Dining Experience">
+
+                    
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-7">
+                <div class="dining-content">
+
+                    <span class="section-tag">
+                        Dining Experience
+                    </span>
+
+                    <h2>
+                        Enjoy Every Meal Amidst Kerala's Beautiful Backwaters
+                    </h2>
+
+                    <p>
+                        Experience lakeside dining, private candlelight dinners,
+                        family gatherings and houseboat dining experiences crafted
+                        to create unforgettable memories.
+                    </p>
+
+                    <div class="feature-grid">
+
+                        <div class="feature-card">
+                            <i class="fas fa-leaf"></i>
+                            <h5>Lakeside Dining</h5>
+                        </div>
+
+                        <div class="feature-card">
+                            <i class="fas fa-heart"></i>
+                            <h5>Candle Light Dinner</h5>
+                        </div>
+
+                        <div class="feature-card">
+                            <i class="fas fa-ship"></i>
+                            <h5>Houseboat Dining</h5>
+                        </div>
+
+                        <div class="feature-card">
+                            <i class="fas fa-users"></i>
+                            <h5>Family Dining Experience</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="heritage-banner">
+
+    <span>Kerala's Traditional Recipes</span>
+
+    <h2>
+        Crafted With Kerala's<br>
+        Traditional Recipes
+    </h2>
+
+    <p>
+        Every dish tells a story of our backwaters,
+        spices and heritage.
+    </p>
+
+</section>
+
+
+
+
+	<footer>
+		<!-- Footer Start-->
+		<div class="footer-area black-bg footer-padding">
+			<div class="container">
+				<div class="row d-flex justify-content-between">
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+					   <div class="single-footer-caption mb-30">
+						  <!-- logo -->
+						  <div class="footer-logo">
+							<a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+						  </div>
+						  <div class="footer-social footer-social2">
+							  <a href="#"><i class="fab fa-facebook-f"></i></a>
+							  <a href="#"><i class="fab fa-twitter"></i></a>
+							  <a href="#"><i class="fas fa-globe"></i></a>
+							  <a href="#"><i class="fab fa-behance"></i></a>
+						  </div>
+						  <div class="footer-pera">
+							   <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						  </div>
+					   </div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+						<div class="single-footer-caption mb-30">
+							<div class="footer-tittle">
+								<h4>Quick Links</h4>
+								<ul>
+									<li><a href="#">About Mariana</a></li>
+									<li><a href="#">Our Best Rooms</a></li>
+									<li><a href="#">Our Photo Gellary</a></li>
+									<li><a href="#">Pool Service</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="single-footer-caption mb-30">
+							<div class="footer-tittle">
+								<h4>Reservations</h4>
+								<ul>
+									<li><a href="#">Tel: 345 5667 889</a></li>
+									<li><a href="#">Skype: Marianabooking</a></li>
+									<li><a href="#">reservations@hotelriver.com</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4  col-sm-5">
+						<div class="single-footer-caption mb-30">
+							<div class="footer-tittle">
+								<h4>Our Location</h4>
+								<ul>
+									<li><a href="#">198 West 21th Street,</a></li>
+									<li><a href="#">Suite 721 New York NY 10016</a></li>
+								</ul>
+								<!-- Form -->
+								 <div class="footer-form" >
+									 <div id="mc_embed_signup">
+										 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+										 method="get" class="subscribe_form relative mail_part">
+											 <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+											 class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+											 onblur="this.placeholder = ' Email Address '">
+											 <div class="form-icon">
+											   <button type="submit" name="submit" id="newsletter-submit"
+											   class="email_icon newsletter-submit button-contactForm"><img src="assets/img/logo/form-iocn.jpg" alt=""></button>
+											 </div>
+											 <div class="mt-10 info"></div>
+										 </form>
+									 </div>
+								 </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End-->
+	</footer>
+
+<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+		<script src="./assets/js/animated.headline.js"></script>
+		<script src="./assets/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+
+        });
+        var timepicker = $('#timepicker').timepicker({
+         format: 'HH.MM'
+     });
+    </script>
+</body>
+</html>
